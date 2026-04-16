@@ -1,9 +1,9 @@
 export default function Footer() {
 	return (
-		<footer className="bg-slate-950 w-full py-16">
+		<footer className="bg-black w-full py-16">
 			<div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
 				<div className="text-xl font-black font-headline text-white tracking-tighter uppercase">
-					SOVEREIGN<span className="text-primary font-light">VAULT</span>
+					TALVAD<span className="text-primary font-light">VAULT</span>
 				</div>
 				<div className="flex flex-wrap justify-center gap-10 font-bold text-[10px] uppercase tracking-[0.2em] text-white/40">
 					<a
