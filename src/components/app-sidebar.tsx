@@ -5,6 +5,7 @@ import {
 	SidebarContent,
 	SidebarHeader,
 	SidebarMenu,
+	SidebarMenuButton,
 	SidebarMenuItem,
 	SidebarRail,
 } from "#/components/ui/sidebar";
@@ -24,14 +25,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				<SidebarMenu className="p-4">
 					{navMenuItems.map((nav) => (
 						<SidebarMenuItem key={nav.title}>
-							<Link
-								to={nav.link}
-								className="inline-block px-2 py-1 rounded-lg w-full"
-								activeProps={{ className: "bg-sidebar-accent" }}
-								activeOptions={{ exact: true }}
-							>
-								{nav.title}
-							</Link>
+							<SidebarMenuButton asChild>
+								<Link
+									to={nav.link}
+									className="inline-block px-2 py-1 rounded-lg w-full"
+									activeProps={{ className: "bg-sidebar-accent" }}
+									activeOptions={{ exact: true }}
+								>
+									{nav.title}
+								</Link>
+							</SidebarMenuButton>
 						</SidebarMenuItem>
 					))}
 				</SidebarMenu>

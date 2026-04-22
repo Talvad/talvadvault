@@ -17,9 +17,17 @@ import {
 
 export const Route = createFileRoute("/dashboard")({
 	component: RouteComponent,
+	// loader: async ({ location }) => {
+	// 	const breadcrumb = navMenuItems.find(
+	// 		(nav) => (nav.link = location.pathname),
+	// 	);
+	// 	return breadcrumb;
+	// },
 });
 
 export default function RouteComponent() {
+	// const breadcrumb = Route.useLoaderData();
+
 	return (
 		<SidebarProvider>
 			<AppSidebar />
