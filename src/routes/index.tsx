@@ -20,7 +20,7 @@ function App() {
 				<div className="max-w-4xl mx-auto px-6 text-center">
 					<div className="space-y-10 relative z-10">
 						<div className="inline-flex items-center gap-3 bg-surface-variant border border-outline/30 px-4 py-1.5 rounded-full mx-auto">
-							<span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(184,134,11,1)]"></span>
+							<span className="w-1.5 h-1.5 rounded-full bg-primary-main shadow-[0_0_8px_rgba(184,134,11,1)]"></span>
 							<span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/60">
 								Institutional Grade Security
 							</span>
@@ -42,7 +42,7 @@ function App() {
 							</button>
 							<button
 								type="button"
-								className="flex items-center gap-3 text-secondary font-bold text-xs uppercase tracking-widest group"
+								className="flex items-center gap-3 text-secondary-main font-bold text-xs uppercase tracking-widest group"
 							>
 								<span className="w-10 h-10 rounded-full border border-outline flex items-center justify-center group-hover:bg-surface-variant transition-colors">
 									<Play className="size-5" />
@@ -52,9 +52,9 @@ function App() {
 						</div>
 					</div>
 					<div className="relative mt-24 max-w-2xl mx-auto">
-						<div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
+						<div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-primary-main/ 5 rounded-full blur-[100px]"></div>
 						<div className="relative group">
-							<div className="absolute inset-0 bg-primary/20 rounded-[3rem] blur-2xl group-hover:blur-3xl transition-all opacity-30"></div>
+							<div className="absolute inset-0 bg-primary-main/ 20 rounded-[3rem] blur-2xl group-hover:blur-3xl transition-all opacity-30"></div>
 							<img
 								alt="Luxury gold bars"
 								className="relative rounded-[2.5rem] w-full aspect-[16/10] object-cover gold-glow border-8 border-white"
@@ -62,14 +62,14 @@ function App() {
 							/>
 							<div className="glass-card absolute -bottom-6 left-1/2 -translate-x-1/2 p-6 rounded-3xl shadow-2xl border border-white/50 w-[80%] max-w-xs">
 								<div className="flex items-center justify-center gap-5 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+									<div className="w-10 h-10 rounded-xl bg-primary-main/ 10 flex items-center justify-center text-primary-main shrink-0">
 										<BadgeCheck className="size-5 font-bold" />
 									</div>
 									<div className="text-left">
 										<p className="text-[9px] font-black text-secondary/40 uppercase tracking-widest">
 											Available LTV
 										</p>
-										<p className="text-xl font-black text-secondary tracking-tight">
+										<p className="text-xl font-black text-secondary-main tracking-tight">
 											Up to 75%
 										</p>
 									</div>
@@ -87,10 +87,10 @@ function App() {
 				<div className="max-w-7xl mx-auto px-6">
 					<div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
 						<div>
-							<p className="text-primary font-black tracking-[0.3em] uppercase text-[10px] mb-4">
+							<p className="text-primary-main font-black tracking-[0.3em] uppercase text-[10px] mb-4">
 								Global Markets
 							</p>
-							<h2 className="text-4xl font-extrabold font-headline text-secondary tracking-tight">
+							<h2 className="text-4xl font-extrabold font-headline text-secondary-main tracking-tight">
 								Real-Time Evaluation
 							</h2>
 						</div>
@@ -106,8 +106,8 @@ function App() {
 					</div>
 					<div className="grid lg:grid-cols-3 gap-6">
 						{/* <!-- Modern Rate Card --> */}
-						<div className="bg-secondary p-10 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group">
-							<div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-110 transition-transform duration-1000"></div>
+						<div className="bg-secondary-main p-10 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group">
+							<div className="absolute top-0 right-0 w-64 h-64 bg-primary-main/ 10 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-110 transition-transform duration-1000"></div>
 							<div className="relative z-10 h-full flex flex-col justify-between">
 								<div className="flex justify-between items-start">
 									<ChartNoAxesCombined className="size-9 text-primary-light" />
@@ -164,25 +164,25 @@ function App() {
 										<div className="grid grid-cols-4 gap-4">
 											<button
 												type="button"
-												className="py-4 rounded-2xl bg-secondary text-white font-bold text-xs uppercase tracking-widest"
+												className="py-4 rounded-2xl bg-secondary-main text-white font-bold text-xs uppercase tracking-widest"
 											>
 												06m
 											</button>
 											<button
 												type="button"
-												className="py-4 rounded-2xl border border-outline hover:border-secondary transition-colors font-bold text-xs uppercase tracking-widest"
+												className="py-4 rounded-2xl border border-outline hover:border-secondary-main transition-colors font-bold text-xs uppercase tracking-widest"
 											>
 												12m
 											</button>
 											<button
 												type="button"
-												className="py-4 rounded-2xl border border-outline hover:border-secondary transition-colors font-bold text-xs uppercase tracking-widest"
+												className="py-4 rounded-2xl border border-outline hover:border-secondary-main transition-colors font-bold text-xs uppercase tracking-widest"
 											>
 												24m
 											</button>
 											<button
 												type="button"
-												className="py-4 rounded-2xl border border-outline hover:border-secondary transition-colors font-bold text-xs uppercase tracking-widest"
+												className="py-4 rounded-2xl border border-outline hover:border-secondary-main transition-colors font-bold text-xs uppercase tracking-widest"
 											>
 												36m
 											</button>
@@ -194,7 +194,7 @@ function App() {
 									<p className="text-[10px] font-black text-secondary/40 uppercase tracking-[0.2em] mb-3">
 										Est. Liquidity Amount
 									</p>
-									<h4 className="text-5xl font-black text-secondary tracking-tighter mb-8">
+									<h4 className="text-5xl font-black text-secondary-main tracking-tighter mb-8">
 										$14,703.75
 									</h4>
 									<div className="space-y-4 mb-10 border-t border-outline pt-8">
@@ -213,7 +213,7 @@ function App() {
 									</div>
 									<button
 										type="button"
-										className="w-full py-5 rounded-2xl bg-secondary text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary/90 transition-colors"
+										className="w-full py-5 rounded-2xl bg-secondary-main text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary/90 transition-colors"
 									>
 										Initiate Disbursement
 									</button>
@@ -227,21 +227,21 @@ function App() {
 			<section className="py-32 bg-surface">
 				<div className="max-w-7xl mx-auto px-6">
 					<div className="text-center max-w-2xl mx-auto mb-20">
-						<p className="text-primary font-black tracking-[0.4em] uppercase text-[10px] mb-4">
+						<p className="text-primary-main font-black tracking-[0.4em] uppercase text-[10px] mb-4">
 							The Sovereign Standard
 						</p>
-						<h2 className="text-5xl font-extrabold font-headline text-secondary tracking-tight">
+						<h2 className="text-5xl font-extrabold font-headline text-secondary-main tracking-tight">
 							Premium asset management
 						</h2>
 					</div>
 					<div className="grid md:grid-cols-12 gap-6">
 						<div className="md:col-span-8 bg-surface-variant rounded-[3rem] p-12 flex flex-col justify-between group overflow-hidden relative border border-outline/50">
-							<div className="absolute top-0 right-0 w-full h-full bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+							<div className="absolute top-0 right-0 w-full h-full bg-linear-to-br from-primary-main/ 5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 							<div className="relative z-10">
-								<div className="w-14 h-14 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary mb-10 border border-outline/30">
+								<div className="w-14 h-14 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary-main mb-10 border border-outline/30">
 									<ShieldUser className="size-7.5" />
 								</div>
-								<h3 className="text-3xl font-black text-secondary mb-6 tracking-tight">
+								<h3 className="text-3xl font-black text-secondary-main mb-6 tracking-tight">
 									Category-5 Vault Storage
 								</h3>
 								<p className="text-secondary/60 text-lg leading-relaxed max-w-lg font-medium">
@@ -284,9 +284,9 @@ function App() {
 						</div>
 						<div className="md:col-span-4 bg-white border border-outline rounded-[3rem] p-12 flex flex-col justify-between shadow-sm hover:shadow-xl transition-shadow duration-500">
 							<div>
-								<Landmark className="text-4xl text-primary mb-10" />
+								<Landmark className="text-4xl text-primary-main mb-10" />
 
-								<h3 className="text-2xl font-black text-secondary mb-4 tracking-tight">
+								<h3 className="text-2xl font-black text-secondary-main mb-4 tracking-tight">
 									Market Low Rates
 								</h3>
 								<p className="text-secondary/50 leading-relaxed font-medium">
@@ -295,7 +295,7 @@ function App() {
 								</p>
 							</div>
 						</div>
-						<div className="md:col-span-8 bg-secondary text-white rounded-[3rem] p-12 flex items-center justify-between group overflow-hidden relative">
+						<div className="md:col-span-8 bg-secondary-main text-white rounded-[3rem] p-12 flex items-center justify-between group overflow-hidden relative">
 							<div className="relative z-10 max-w-md">
 								<h3 className="text-2xl font-black mb-4 tracking-tight">
 									Absolute Confidentiality

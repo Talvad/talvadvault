@@ -5,46 +5,46 @@
 @theme {
   --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-body:"Inter",sans-serif;
-  --color-primary:var(--primary);
+  --color-primary-main:var(--primary-main);
   --color-primary-light:var(--primary-light);
   --color-primary-dark:var(--primary-dark);
   --color-surface:var(--surface);
   --color-surface-variant:var(--surface-variant);
-  --color-secondary:var(--secondary);
+  --color-secondary-main:var(--secondary-main);
   --color-secondary-variant:var(--secondary-variant);
   --color-outline:var(--outline);
 }
 
 :root {
- --primary: #B8860B;
+ --primary-main: #B8860B;
                         --primary-light: #FFD700;
                         --primary-dark: #8B6508;
                         --surface: #FFFFFF;
                         --surface-variant: #F8F9FA;
-                        --secondary: #1A1C1D;
+                        --secondary-main: #1A1C1D;
                         --secondary-variant:#ffffff;
                         --outline: #E5E7EB;
 }
 
 :root[data-theme="dark"] {
-  --primary: #B8860B;
+  --primary-main: #B8860B;
                         --primary-light: #FFD700;
                         --primary-dark: #8B6508;
                         --surface: #0F172A;
                         --surface-variant: #1E293B;
-                        --secondary: #F8F9FA;
+                        --secondary-main: #F8F9FA;
                         --secondary-variant:#0F172A;
                         --outline: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --primary: #B8860B;
+    --primary-main: #B8860B;
                         --primary-light: #FFD700;
                         --primary-dark: #8B6508;
                         --surface: #0F172A;
                         --surface-variant: #1E293B;
-                        --secondary: #F8F9FA;
+                        --secondary-main: #F8F9FA;
                         
                         --secondary-variant:#0F172A;
                         --outline: rgba(255, 255, 255, 0.1);
