@@ -3,10 +3,10 @@ import { AppSidebar } from "@/components/app-sidebar";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
-	BreadcrumbLink,
+	// BreadcrumbLink,
 	BreadcrumbList,
 	BreadcrumbPage,
-	BreadcrumbSeparator,
+	// BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -33,12 +33,13 @@ export default function RouteComponent() {
 					<Breadcrumb>
 						<BreadcrumbList>
 							<BreadcrumbItem className="hidden md:block">
-								<BreadcrumbLink href="#">Build Your Application</BreadcrumbLink>
+								{/* <BreadcrumbLink href="#">Build Your Application</BreadcrumbLink> */}
+								<BreadcrumbPage>Home</BreadcrumbPage>
 							</BreadcrumbItem>
-							<BreadcrumbSeparator className="hidden md:block" />
+							{/* <BreadcrumbSeparator className="hidden md:block" />
 							<BreadcrumbItem>
 								<BreadcrumbPage>Data Fetching</BreadcrumbPage>
-							</BreadcrumbItem>
+							</BreadcrumbItem> */}
 						</BreadcrumbList>
 					</Breadcrumb>
 				</header>

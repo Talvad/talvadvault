@@ -10,7 +10,7 @@ import {
 } from "#/components/ui/sidebar";
 import Logo from "./logo";
 
-const navMenuItems = [
+export const navMenuItems = [
 	{ title: "Home", link: "/dashboard" },
 	{ title: "Create", link: "/dashboard/create" },
 ];
