@@ -1,12 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import Logo from "./logo";
 
 export default function Header() {
 	return (
 		<nav className="fixed top-0 w-full z-50 bg-secondary-variant/80 backdrop-blur-xl border-b border-outline/50">
 			<div className="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-				<Link to="/" className="text-xl font-extrabold tracking-tight text-secondary-mainfont-headline">
-					TALVAD<span className="text-primary-main font-light">VAULT</span>
-				</Link>
+				<Logo />
 				<div className="flex items-center gap-6">
 					<Link
 						to="/login"
