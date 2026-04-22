@@ -5,6 +5,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Field, FieldError, FieldGroup, FieldLabel } from "#/components/ui/field";
 import { Input } from "#/components/ui/input";
 import { Button } from "#/components/ui/button";
+import Header from "#/components/Header";
 
 export const Route = createFileRoute("/login")({
   component: RouteComponent,
@@ -26,6 +27,8 @@ function RouteComponent() {
     },
   });
   return (
+    <>
+    <Header/>
     <section className="min-h-dvh grid place-content-center">
       <Card className="min-w-sm">
         <CardHeader>
@@ -96,6 +99,6 @@ function RouteComponent() {
           </Field>
         </CardFooter>
       </Card>
-    </section>
+    </section></>
   );
 }
