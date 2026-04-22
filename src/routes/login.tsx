@@ -1,3 +1,4 @@
+import { Card, CardContent, CardHeader, CardTitle } from '#/components/ui/card'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/login')({
@@ -6,6 +7,13 @@ export const Route = createFileRoute('/login')({
 
 function RouteComponent() {
   return <section className='min-h-dvh grid place-content-center'>
-    <h1>Login</h1>
+    <Card className='min-w-sm'>
+      <CardHeader>
+        <CardTitle>Login to your account</CardTitle>
+      </CardHeader>
+      <CardContent>
+        
+      </CardContent>
+    </Card>
   </section>
 }
