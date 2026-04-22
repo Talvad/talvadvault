@@ -21,15 +21,15 @@ function App() {
 					<div className="space-y-10 relative z-10">
 						<div className="inline-flex items-center gap-3 bg-surface-variant border border-outline/30 px-4 py-1.5 rounded-full mx-auto">
 							<span className="w-1.5 h-1.5 rounded-full bg-primary-main shadow-[0_0_8px_rgba(184,134,11,1)]"></span>
-							<span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/60">
+							<span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary-main/60">
 								Institutional Grade Security
 							</span>
 						</div>
-						<h1 className="text-6xl md:text-8xl font-black font-headline leading-[0.9] tracking-tight text-secondary">
+						<h1 className="text-6xl md:text-8xl font-black font-headline leading-[0.9] tracking-tight text-secondary-main">
 							Secure your <br />
 							<span className="liquid-gold">Legacy.</span>
 						</h1>
-						<p className="text-xl text-secondary/60 leading-relaxed max-w-xl mx-auto font-medium">
+						<p className="text-xl text-secondary-main/60 leading-relaxed max-w-xl mx-auto font-medium">
 							Liquidity meets heritage. Access immediate capital backed by your
 							physical bullion assets.
 						</p>
@@ -66,7 +66,7 @@ function App() {
 										<BadgeCheck className="size-5 font-bold" />
 									</div>
 									<div className="text-left">
-										<p className="text-[9px] font-black text-secondary/40 uppercase tracking-widest">
+										<p className="text-[9px] font-black text-secondary-main/40 uppercase tracking-widest">
 											Available LTV
 										</p>
 										<p className="text-xl font-black text-secondary-main tracking-tight">
@@ -74,7 +74,7 @@ function App() {
 										</p>
 									</div>
 								</div>
-								<div className="h-1.5 w-full bg-secondary/5 rounded-full overflow-hidden">
+								<div className="h-1.5 w-full bg-secondary-main/5 rounded-full overflow-hidden">
 									<div className="h-full btn-gold w-3/4"></div>
 								</div>
 							</div>
@@ -95,7 +95,7 @@ function App() {
 							</h2>
 						</div>
 						<div className="glass-card px-5 py-2.5 rounded-full flex items-center gap-4 text-xs font-bold border border-outline/50">
-							<span className="text-secondary/40 uppercase tracking-widest">
+							<span className="text-secondary-main/40 uppercase tracking-widest">
 								Market Status
 							</span>
 							<div className="flex items-center gap-2">
@@ -135,22 +135,22 @@ function App() {
 								<div className="flex-1 space-y-10">
 									<div className="space-y-6">
 										<div className="flex justify-between items-end">
-											<div className="text-[10px] font-black uppercase text-secondary/40 tracking-[0.2em]">
+											<div className="text-[10px] font-black uppercase text-secondary-main/40 tracking-[0.2em]">
 												Bullion Weight
 											</div>
-											<span className="text-xl font-bold text-secondary">
+											<span className="text-xl font-bold text-secondary-main">
 												250g
 											</span>
 										</div>
 										<div className="relative pt-2">
 											<input
-												className="w-full h-1 bg-secondary/10 rounded-full appearance-none cursor-pointer accent-primary"
+												className="w-full h-1 bg-secondary-main/10 rounded-full appearance-none cursor-pointer accent-primary"
 												max="1000"
 												min="10"
 												type="range"
 												value="250"
 											/>
-											<div className="flex justify-between mt-3 text-[9px] font-black text-secondary/30 uppercase tracking-widest">
+											<div className="flex justify-between mt-3 text-[9px] font-black text-secondary-main/30 uppercase tracking-widest">
 												<span>10g</span>
 												<span>500g</span>
 												<span>1kg</span>
@@ -158,7 +158,7 @@ function App() {
 										</div>
 									</div>
 									<div className="space-y-6">
-										<div className="block text-[10px] font-black uppercase text-secondary/40 tracking-[0.2em]">
+										<div className="block text-[10px] font-black uppercase text-secondary-main/40 tracking-[0.2em]">
 											Tenure Horizon
 										</div>
 										<div className="grid grid-cols-4 gap-4">
@@ -191,7 +191,7 @@ function App() {
 								</div>
 								<div className="w-px bg-outline hidden md:block"></div>
 								<div className="flex-1 flex flex-col justify-center">
-									<p className="text-[10px] font-black text-secondary/40 uppercase tracking-[0.2em] mb-3">
+									<p className="text-[10px] font-black text-secondary-main/40 uppercase tracking-[0.2em] mb-3">
 										Est. Liquidity Amount
 									</p>
 									<h4 className="text-5xl font-black text-secondary-main tracking-tighter mb-8">
@@ -199,21 +199,21 @@ function App() {
 									</h4>
 									<div className="space-y-4 mb-10 border-t border-outline pt-8">
 										<div className="flex justify-between text-xs font-bold">
-											<span className="text-secondary/60">
+											<span className="text-secondary-main/60">
 												Annual Interest Rate
 											</span>
 											<span className="text-primary">8.9% Fixed</span>
 										</div>
 										<div className="flex justify-between text-xs font-bold">
-											<span className="text-secondary/60">
+											<span className="text-secondary-main/60">
 												Monthly Commitment
 											</span>
-											<span className="text-secondary">$612.65</span>
+											<span className="text-secondary-main">$612.65</span>
 										</div>
 									</div>
 									<button
 										type="button"
-										className="w-full py-5 rounded-2xl bg-secondary-main text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary/90 transition-colors"
+										className="w-full py-5 rounded-2xl bg-secondary-main text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary-main/90 transition-colors"
 									>
 										Initiate Disbursement
 									</button>
@@ -244,7 +244,7 @@ function App() {
 								<h3 className="text-3xl font-black text-secondary-main mb-6 tracking-tight">
 									Category-5 Vault Storage
 								</h3>
-								<p className="text-secondary/60 text-lg leading-relaxed max-w-lg font-medium">
+								<p className="text-secondary-main/60 text-lg leading-relaxed max-w-lg font-medium">
 									Assets are housed in high-security environments, fully
 									underwritten by Lloyds of London with 24/7 tactical
 									monitoring.
@@ -289,7 +289,7 @@ function App() {
 								<h3 className="text-2xl font-black text-secondary-main mb-4 tracking-tight">
 									Market Low Rates
 								</h3>
-								<p className="text-secondary/50 leading-relaxed font-medium">
+								<p className="text-secondary-main/50 leading-relaxed font-medium">
 									Custom lending suites starting from 0.74% per month, the elite
 									benchmark.
 								</p>

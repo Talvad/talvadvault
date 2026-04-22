@@ -40,7 +40,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
 				<HeadContent />
 			</head>
-			<body className="bg-surface font-body text-secondary/70 selection:bg-primary/40 selection:text-white antialiased wrap-anywhere">
+			<body className="bg-surface font-body text-secondary-main/70 selection:bg-primary-main/40 selection:text-white antialiased wrap-anywhere">
 				<Header />
 				{children}
 				<Footer />
