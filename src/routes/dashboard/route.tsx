@@ -25,7 +25,7 @@ export const Route = createFileRoute("/dashboard")({
 	// },
 });
 
-export default function RouteComponent() {
+function RouteComponent() {
 	// const breadcrumb = Route.useLoaderData();
 
 	return (
