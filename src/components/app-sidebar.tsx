@@ -14,6 +14,8 @@ import Logo from "./logo";
 export const navMenuItems = [
 	{ title: "Home", link: "/dashboard" },
 	{ title: "Create", link: "/dashboard/create" },
+	{ title: "Loans", link: "/dashboard/loans" },
+	{ title: "Profiles", link: "/dashboard/profiles" },
 ];
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
@@ -29,7 +31,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 								<Link
 									to={nav.link}
 									className="inline-block px-2 py-1 rounded-lg w-full"
-									activeProps={{ className: "bg-sidebar-accent" }}
+									activeProps={{
+										className: "bg-primary-main/50 hover:bg-primary-main/50",
+									}}
+									inactiveProps={{
+										className: "hover:bg-primary-main/50",
+									}}
 									activeOptions={{ exact: true }}
 								>
 									{nav.title}

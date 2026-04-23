@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
+import { Route as DashboardProfilesRouteImport } from './routes/dashboard/profiles'
 import { Route as DashboardLoansRouteImport } from './routes/dashboard/loans'
 import { Route as DashboardCreateRouteImport } from './routes/dashboard/create'
 
@@ -42,6 +43,11 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
+const DashboardProfilesRoute = DashboardProfilesRouteImport.update({
+  id: '/profiles',
+  path: '/profiles',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
 const DashboardLoansRoute = DashboardLoansRouteImport.update({
   id: '/loans',
   path: '/loans',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/dashboard/create': typeof DashboardCreateRoute
   '/dashboard/loans': typeof DashboardLoansRoute
+  '/dashboard/profiles': typeof DashboardProfilesRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/dashboard/create': typeof DashboardCreateRoute
   '/dashboard/loans': typeof DashboardLoansRoute
+  '/dashboard/profiles': typeof DashboardProfilesRoute
   '/dashboard': typeof DashboardIndexRoute
 }
 export interface FileRoutesById {
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/dashboard/create': typeof DashboardCreateRoute
   '/dashboard/loans': typeof DashboardLoansRoute
+  '/dashboard/profiles': typeof DashboardProfilesRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/dashboard/create'
     | '/dashboard/loans'
+    | '/dashboard/profiles'
     | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/dashboard/create'
     | '/dashboard/loans'
+    | '/dashboard/profiles'
     | '/dashboard'
   id:
     | '__root__'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/dashboard/create'
     | '/dashboard/loans'
+    | '/dashboard/profiles'
     | '/dashboard/'
   fileRoutesById: FileRoutesById
 }
@@ -153,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
+    '/dashboard/profiles': {
+      id: '/dashboard/profiles'
+      path: '/profiles'
+      fullPath: '/dashboard/profiles'
+      preLoaderRoute: typeof DashboardProfilesRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
     '/dashboard/loans': {
       id: '/dashboard/loans'
       path: '/loans'
@@ -173,12 +192,14 @@ declare module '@tanstack/react-router' {
 interface DashboardRouteRouteChildren {
   DashboardCreateRoute: typeof DashboardCreateRoute
   DashboardLoansRoute: typeof DashboardLoansRoute
+  DashboardProfilesRoute: typeof DashboardProfilesRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardCreateRoute: DashboardCreateRoute,
   DashboardLoansRoute: DashboardLoansRoute,
+  DashboardProfilesRoute: DashboardProfilesRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
 
