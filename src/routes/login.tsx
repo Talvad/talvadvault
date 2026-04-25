@@ -18,22 +18,12 @@ import {
 	FieldLabel,
 } from "#/components/ui/field";
 import { Input } from "#/components/ui/input";
-import { useAppSession } from "#/lib/session";
-
-const loginFn = createServerFn({
-	method: "POST",
-})
-	.inputValidator((data: LoginFormType) => data)
-	.handler(async ({ data }) => {
-		const session = await useAppSession();
-		await session.update({ email: data.email });
-		return { success: true };
-	});
+import { checkAuthFn, loginFn } from "#/server";
 
 export const Route = createFileRoute("/login")({
 	beforeLoad: async () => {
-		const session = await useAppSession();
-		if (session.data.email) {
+		const { email } = await checkAuthFn();
+		if (email) {
 			throw redirect({ to: "/dashboard" });
 		}
 	},
