@@ -1,4 +1,5 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { getCurrentUser } from "#/server/getCurrentUser";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
 	Breadcrumb,
@@ -16,18 +17,15 @@ import {
 } from "@/components/ui/sidebar";
 
 export const Route = createFileRoute("/dashboard")({
+	beforeLoad: async () => {
+		const { email } = await getCurrentUser();
+		return { email };
+	},
 	component: RouteComponent,
-	// loader: async ({ location }) => {
-	// 	const breadcrumb = navMenuItems.find(
-	// 		(nav) => (nav.link = location.pathname),
-	// 	);
-	// 	return breadcrumb;
-	// },
 });
 
 function RouteComponent() {
-	// const breadcrumb = Route.useLoaderData();
-
+	const { email } = Route.useRouteContext();
 	return (
 		<SidebarProvider>
 			<AppSidebar />
@@ -42,7 +40,7 @@ function RouteComponent() {
 						<BreadcrumbList>
 							<BreadcrumbItem className="hidden md:block">
 								{/* <BreadcrumbLink href="#">Build Your Application</BreadcrumbLink> */}
-								<BreadcrumbPage>Home</BreadcrumbPage>
+								<BreadcrumbPage>{email}</BreadcrumbPage>
 							</BreadcrumbItem>
 							{/* <BreadcrumbSeparator className="hidden md:block" />
 							<BreadcrumbItem>
