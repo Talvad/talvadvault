@@ -1,4 +1,4 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
 import { getCurrentUser } from "#/server/getCurrentUser";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
@@ -19,6 +19,9 @@ import {
 export const Route = createFileRoute("/dashboard")({
 	beforeLoad: async () => {
 		const { email } = await getCurrentUser();
+		if (!email) {
+			throw redirect({ to: "/login" });
+		}
 		return { email };
 	},
 	component: RouteComponent,
