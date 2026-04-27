@@ -17,7 +17,7 @@ import {
 
 export const Route = createFileRoute("/dashboard")({
 	beforeLoad: ({ context }) => {
-		if (!context.user?.email) {
+		if (!context.user?.name) {
 			throw redirect({ to: "/login" });
 		}
 	},
@@ -40,7 +40,7 @@ function RouteComponent() {
 						<BreadcrumbList>
 							<BreadcrumbItem className="hidden md:block">
 								{/* <BreadcrumbLink href="#">Build Your Application</BreadcrumbLink> */}
-								<BreadcrumbPage>{user?.name}</BreadcrumbPage>
+								<BreadcrumbPage>{user?.email}</BreadcrumbPage>
 							</BreadcrumbItem>
 							{/* <BreadcrumbSeparator className="hidden md:block" />
 							<BreadcrumbItem>

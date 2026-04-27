@@ -21,7 +21,7 @@ import { loginFn } from "#/server";
 
 export const Route = createFileRoute("/login")({
 	beforeLoad: ({ context }) => {
-		if (context.user) {
+		if (context.user?.name) {
 			throw redirect({ to: "/dashboard" });
 		}
 	},
@@ -42,9 +42,9 @@ function RouteComponent() {
 		validators: { onSubmit: LoginFormSchema },
 		onSubmit: async ({ value }) => {
 			const res = await loginFn({ data: value });
-			if (res.success) {
-				navigate({ to: "/dashboard" });
-			}
+			// if (res.success) {
+			// 	navigate({ to: "/dashboard" });
+			// }
 		},
 	});
 	return (
