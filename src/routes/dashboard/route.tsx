@@ -1,5 +1,4 @@
-import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
-import { getCurrentUser } from "#/server/getCurrentUser";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { AppSidebar } from "@/components/app-sidebar";
 import {
 	Breadcrumb,
@@ -17,18 +16,10 @@ import {
 } from "@/components/ui/sidebar";
 
 export const Route = createFileRoute("/dashboard")({
-	beforeLoad: async () => {
-		const { email } = await getCurrentUser();
-		if (!email) {
-			throw redirect({ to: "/login" });
-		}
-		return { email };
-	},
 	component: RouteComponent,
 });
 
 function RouteComponent() {
-	const { email } = Route.useRouteContext();
 	return (
 		<SidebarProvider>
 			<AppSidebar />
@@ -43,7 +34,7 @@ function RouteComponent() {
 						<BreadcrumbList>
 							<BreadcrumbItem className="hidden md:block">
 								{/* <BreadcrumbLink href="#">Build Your Application</BreadcrumbLink> */}
-								<BreadcrumbPage>{email}</BreadcrumbPage>
+								<BreadcrumbPage>Home</BreadcrumbPage>
 							</BreadcrumbItem>
 							{/* <BreadcrumbSeparator className="hidden md:block" />
 							<BreadcrumbItem>

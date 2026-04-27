@@ -1,6 +1,5 @@
 import { useForm } from "@tanstack/react-form";
-import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/react-start";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import * as z from "zod";
 import Header from "#/components/Header";
 import { Button } from "#/components/ui/button";
@@ -18,15 +17,9 @@ import {
 	FieldLabel,
 } from "#/components/ui/field";
 import { Input } from "#/components/ui/input";
-import { checkAuthFn, loginFn } from "#/server";
+import { loginFn } from "#/server";
 
 export const Route = createFileRoute("/login")({
-	beforeLoad: async () => {
-		const { email } = await checkAuthFn();
-		if (email) {
-			throw redirect({ to: "/dashboard" });
-		}
-	},
 	component: RouteComponent,
 });
 
@@ -34,9 +27,8 @@ const LoginFormSchema = z.object({
 	email: z.email(),
 	password: z.string(),
 });
-type LoginFormType = z.infer<typeof LoginFormSchema>;
 function RouteComponent() {
-	const navigate = useNavigate();
+	const navigate = Route.useNavigate();
 	const form = useForm({
 		defaultValues: {
 			email: "",
