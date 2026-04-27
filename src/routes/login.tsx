@@ -1,5 +1,5 @@
 import { useForm } from "@tanstack/react-form";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import * as z from "zod";
 import Header from "#/components/Header";
 import { Button } from "#/components/ui/button";
@@ -20,6 +20,11 @@ import { Input } from "#/components/ui/input";
 import { loginFn } from "#/server";
 
 export const Route = createFileRoute("/login")({
+	beforeLoad: ({ context }) => {
+		if (context.user) {
+			throw redirect({ to: "/dashboard" });
+		}
+	},
 	component: RouteComponent,
 });
 
