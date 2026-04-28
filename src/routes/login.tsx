@@ -42,9 +42,9 @@ function RouteComponent() {
 		validators: { onSubmit: LoginFormSchema },
 		onSubmit: async ({ value }) => {
 			const res = await loginFn({ data: value });
-			// if (res.success) {
-			// 	navigate({ to: "/dashboard" });
-			// }
+			if (res.success) {
+				navigate({ to: "/dashboard" });
+			}
 		},
 	});
 	return (

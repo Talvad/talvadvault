@@ -41,7 +41,8 @@ export const fetchUserFn = createServerFn({ method: "GET" }).handler(
 		const userSession = await useAppSession();
 		try {
 			const refreshToken = longTokenSession.data.RefreshToken;
-			if (!shortTokenSession.data.AccessToken && refreshToken) {
+			const idToken = shortTokenSession.data.IdToken;
+			if (!idToken && refreshToken) {
 				const response = await cognitoRefreshUser(refreshToken);
 				const tokens = response.data.AuthenticationResult;
 				await shortTokenSession.update({
