@@ -25,15 +25,25 @@ export const cognitoLogin = async ({
 };
 const userPoolId = process.env.USER_POOL_ID!;
 const clientId = process.env.USER_POOL_CLIENT_ID!;
+
 export const verifyToken = async (token: string) => {
 	try {
 		const verifier = CognitoJwtVerifier.create({
 			userPoolId,
-			tokenUse: "access",
+			tokenUse: "id",
 			clientId,
 		});
 		const payload = await verifier.verify(token);
 		return payload;
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const cognitoRefreshUser = async (token: string) => {
+	try {
+		const response = await puplicApi.post("/user/refresh", { token });
+		return response.data;
 	} catch (error) {
 		throw error;
 	}

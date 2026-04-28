@@ -8,18 +8,27 @@ export function useAppSession() {
 	return useSession<SessionUser>({
 		password: process.env.SESSION_SECRET!,
 		cookie: {
-			maxAge: 30 * 24 * 60 * 60,
+			maxAge: 60 * 60,
 		},
 	});
 }
-type SessionToken = {
+type ShortSessionToken = {
 	AccessToken: string;
 	IdToken: string;
-	RefreshToken: string;
-	TokenType: string;
 };
-export function useTokenSession() {
-	return useSession<SessionToken>({
+export function useShortTokenSession() {
+	return useSession<ShortSessionToken>({
+		password: process.env.SESSION_SECRET!,
+		cookie: {
+			maxAge: 60 * 60,
+		},
+	});
+}
+type LongSessionToken = {
+	RefreshToken: string;
+};
+export function useLongTokenSession() {
+	return useSession<LongSessionToken>({
 		password: process.env.SESSION_SECRET!,
 		cookie: {
 			maxAge: 30 * 24 * 60 * 60,
