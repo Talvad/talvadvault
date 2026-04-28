@@ -49,7 +49,7 @@ function RouteComponent() {
 	});
 	return (
 		<>
-			<Header />
+			<Header loggedIn={false} />
 			<section className="min-h-dvh grid place-content-center">
 				<Card className="min-w-sm">
 					<CardHeader>
